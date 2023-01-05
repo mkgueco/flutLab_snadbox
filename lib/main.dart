@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+String getFullName(String firstName, String lastName) {
+  return '$firstName $lastName';
+}
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print(getFullName('foo', 'bar'));
+
     return MaterialApp(
       // Application name
       title: 'Flutter Hello World',
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.lime,
       ),
       // A widget which will be started on application startup
       home: MyHomePage(title: 'Mamon is a hot reload'),
